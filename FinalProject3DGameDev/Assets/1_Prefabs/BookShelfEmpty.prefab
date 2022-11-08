@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4948496815981152175}
   - component: {fileID: 3824771001682221782}
   - component: {fileID: 4399220694333515620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7454518036496576154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7737234910589617068}
-  m_Layer: 0
+  - component: {fileID: 4642561479322193641}
+  m_Layer: 6
   m_Name: BookShelfEmpty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,6 +149,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &4642561479322193641
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6929912298014398742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5302568919011541938, guid: fa566cccb9e27ce43bf45e42eca96d2c, type: 3}
 --- !u!1 &7291515584843514132
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4499445962736947946}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
