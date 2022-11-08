@@ -14,7 +14,8 @@ public class Player : MonoBehaviour
     //Shooting Variables
     private Transform muzzle;
     
-    [SerializeField] Camera mainCam;
+    //Holds current camera
+    [SerializeField] Camera mainCam;            //added by tina
 
     //Player variables
     [SerializeField] private float speed = 7f;
@@ -90,14 +91,18 @@ public class Player : MonoBehaviour
        
     }
 
-
+    //controls trigger boxes to change camera
+    //added by tina
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("TriggerBox"))
         {
             mainCam.enabled = false;
+            mainCam.transform.SetParent(null);
             mainCam = other.gameObject.transform.GetChild(0).GetComponent<Camera>();
+            mainCam.transform.SetParent(this.gameObject.transform);
             mainCam.enabled = true;
+            Destroy(other);
         }
     }
 
