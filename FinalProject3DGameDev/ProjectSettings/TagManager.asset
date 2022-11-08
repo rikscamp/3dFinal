@@ -6,6 +6,8 @@ TagManager:
   tags:
   - EnemyProjectile
   - PlayerProjectile
+  - TriggerBox
+  - Camera
   layers:
   - Default
   - TransparentFX

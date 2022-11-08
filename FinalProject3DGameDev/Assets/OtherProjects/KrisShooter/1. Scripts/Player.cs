@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     //Shooting Variables
     private Transform muzzle;
     
-    
+    [SerializeField] Camera mainCam;
 
     //Player variables
     [SerializeField] private float speed = 7f;
@@ -88,6 +88,17 @@ public class Player : MonoBehaviour
         if(isJumping && !isGrounded) {isJumping = false;}
 
        
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("TriggerBox"))
+        {
+            mainCam.enabled = false;
+            mainCam = other.gameObject.transform.GetChild(0).GetComponent<Camera>();
+            mainCam.enabled = true;
+        }
     }
 
     private void Fire()
