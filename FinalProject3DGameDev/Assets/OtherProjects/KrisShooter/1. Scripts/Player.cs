@@ -13,9 +13,12 @@ public class Player : MonoBehaviour
 
     //Shooting Variables
     private Transform muzzle;
-    
+
     //Holds current camera
-    [SerializeField] Camera mainCam;            //added by tina
+    [SerializeField] Camera currentCam;
+    [SerializeField] Camera mainCam;          //cam1   //added by tina
+    [SerializeField] Camera cam2;
+    [SerializeField] Camera cam3;
 
     //Player variables
     [SerializeField] private float speed = 7f;
@@ -57,6 +60,9 @@ public class Player : MonoBehaviour
         //Gun piece
         //muzzle = GameObject.Find("Muzzle").transform;
         //gun = GameObject.Find("Gun").transform;
+
+        currentCam = mainCam;       //added by Tina
+
     }
 
     // Update is called once per frame
@@ -95,15 +101,37 @@ public class Player : MonoBehaviour
     //added by tina
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("TriggerBox"))
+
+        //mainCam.enabled = false;
+        //mainCam.transform.SetParent(null);
+        //mainCam = other.gameObject.transform.GetChild(0).GetComponent<Camera>();
+        //mainCam.transform.SetParent(this.gameObject.transform);
+        //mainCam.enabled = true;
+        //Destroy(other);
+
+
+
+        if (other.gameObject.CompareTag("Trigger1"))
         {
-            mainCam.enabled = false;
-            mainCam.transform.SetParent(null);
-            mainCam = other.gameObject.transform.GetChild(0).GetComponent<Camera>();
-            mainCam.transform.SetParent(this.gameObject.transform);
+            currentCam.enabled = false;
+            currentCam = mainCam;
             mainCam.enabled = true;
-            Destroy(other);
         }
+
+        if (other.gameObject.CompareTag("Trigger2"))
+        {
+            currentCam.enabled = false;
+            currentCam = cam2;
+            cam2.enabled = true;
+        }
+
+        if (other.gameObject.CompareTag("Trigger3"))
+        {
+            currentCam.enabled = false;
+            currentCam = cam3;
+            cam3.enabled = true;
+        }
+
     }
 
     private void Fire()
