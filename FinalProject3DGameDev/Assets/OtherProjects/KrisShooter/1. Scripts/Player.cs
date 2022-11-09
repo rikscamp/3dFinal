@@ -120,6 +120,7 @@ public class Player : MonoBehaviour
 
         if (other.gameObject.CompareTag("Trigger2"))
         {
+            
             currentCam.enabled = false;
             currentCam = cam2;
             cam2.enabled = true;
