@@ -3,7 +3,12 @@ guid: 7acc8355356ce0c4f968b94937d9ea2b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FloorLampTexture
+    second: {fileID: 2100000, guid: 74a9ac74a4c768d4fadbfe8bd1d3e417, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
