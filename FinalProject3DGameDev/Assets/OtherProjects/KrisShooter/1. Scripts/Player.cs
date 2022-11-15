@@ -20,6 +20,12 @@ public class Player : MonoBehaviour
     [SerializeField] Camera cam2;
     [SerializeField] Camera cam3;
 
+    //added by tina
+    [SerializeField] float rotationFloat;
+    [SerializeField] bool spinning;
+    public float lerpDuration, timeElapsed;
+
+
     //Player variables
     [SerializeField] private float speed = 7f;
     [SerializeField] private float sprintSpeed = 14f;
@@ -94,13 +100,31 @@ public class Player : MonoBehaviour
         }
         if(isJumping && !isGrounded) {isJumping = false;}
 
-       
+
+
+        //added by tina
+
+        if (timeElapsed < lerpDuration)
+        {
+            transform.rotation = Mathf.Lerp(transform.rotation, rotationFloat, timeElapsed / lerpDuration);
+            timeElapsed += Time.deltaTime;
+        }
+
     }
 
     //controls trigger boxes to change camera
     //added by tina
     private void OnTriggerEnter(Collider other)
     {
+
+        if (other.gameObject.CompareTag("TriggerBox"))
+        {
+            Debug.Log("triggered");
+            rotationFloat = other.gameObject.GetComponent<Rotate>().target;
+            Destroy(other.gameObject);
+            //transform.Rotate(0.0f, rotationFloat, 0.0f, Space.Self);
+        }
+
 
         //mainCam.enabled = false;
         //mainCam.transform.SetParent(null);
@@ -111,28 +135,27 @@ public class Player : MonoBehaviour
 
 
 
-        if (other.gameObject.CompareTag("Trigger1"))
-        {
-            currentCam.enabled = false;
-            currentCam = mainCam;
-            mainCam.enabled = true;
-        }
+        //if (other.gameObject.CompareTag("Trigger1"))
+        //{
+        //    currentCam.enabled = false;
+        //    currentCam = mainCam;
+        //    mainCam.enabled = true;
+        //}
 
-        if (other.gameObject.CompareTag("Trigger2"))
-        {
-            
-            currentCam.enabled = false;
-            currentCam = cam2;
-            cam2.enabled = true;
-        }
+        //if (other.gameObject.CompareTag("Trigger2"))
+        //{
 
-        if (other.gameObject.CompareTag("Trigger3"))
-        {
-            currentCam.enabled = false;
-            currentCam = cam3;
-            cam3.enabled = true;
-        }
+        //    currentCam.enabled = false;
+        //    currentCam = cam2;
+        //    cam2.enabled = true;
+        //}
 
+        //if (other.gameObject.CompareTag("Trigger3"))
+        //{
+        //    currentCam.enabled = false;
+        //    currentCam = cam3;
+        //    cam3.enabled = true;
+        //}
     }
 
     private void Fire()

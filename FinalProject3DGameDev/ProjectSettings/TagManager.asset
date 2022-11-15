@@ -10,6 +10,7 @@ TagManager:
   - Trigger1
   - Trigger2
   - Trigger3
+  - TriggerBox
   layers:
   - Default
   - TransparentFX
