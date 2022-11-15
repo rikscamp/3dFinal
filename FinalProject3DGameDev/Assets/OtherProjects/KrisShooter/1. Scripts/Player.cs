@@ -23,7 +23,8 @@ public class Player : MonoBehaviour
     //added by tina
     [SerializeField] float rotationFloat;
     [SerializeField] bool spinning;
-    public float lerpDuration, timeElapsed;
+    public float lerpDuration = 2.0f;
+    public float timeElapsed;
 
 
     //Player variables
@@ -104,11 +105,20 @@ public class Player : MonoBehaviour
 
         //added by tina
 
-        if (timeElapsed < lerpDuration)
-        {
-            transform.rotation = Mathf.Lerp(transform.rotation, rotationFloat, timeElapsed / lerpDuration);
-            timeElapsed += Time.deltaTime;
-        }
+        //if (spinning)
+        //{
+        //    if (timeElapsed < lerpDuration)
+        //    {
+        //        Mathf.Lerp(transform.rotation.y, rotationFloat, timeElapsed / lerpDuration);
+        //        timeElapsed += Time.deltaTime;
+        //    }
+
+        //    if (timeElapsed == lerpDuration)
+        //    {
+        //        spinning = false;
+        //        timeElapsed = 0;
+        //    }
+        //}
 
     }
 
@@ -122,7 +132,8 @@ public class Player : MonoBehaviour
             Debug.Log("triggered");
             rotationFloat = other.gameObject.GetComponent<Rotate>().target;
             Destroy(other.gameObject);
-            //transform.Rotate(0.0f, rotationFloat, 0.0f, Space.Self);
+            spinning = true;
+            transform.Rotate(0.0f, rotationFloat, 0.0f, Space.Self);
         }
 
 
@@ -157,6 +168,19 @@ public class Player : MonoBehaviour
         //    cam3.enabled = true;
         //}
     }
+
+    //IEnumerator Rotate(float target)
+    //{
+    //    float timeElapsed = 0;
+    //    while (timeElapsed < lerpDuration)
+    //    {
+    //        Mathf.Lerp(transform.rotation.y, target, timeElapsed / lerpDuration);
+    //        timeElapsed += Time.deltaTime;
+    //        yield return null;
+    //    }
+    //}
+
+
 
     private void Fire()
     {
