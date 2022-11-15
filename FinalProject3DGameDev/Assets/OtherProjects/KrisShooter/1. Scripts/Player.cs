@@ -20,6 +20,13 @@ public class Player : MonoBehaviour
     [SerializeField] Camera cam2;
     [SerializeField] Camera cam3;
 
+    //added by tina
+    [SerializeField] float rotationFloat;
+    [SerializeField] bool spinning;
+    public float lerpDuration = 2.0f;
+    public float timeElapsed;
+
+
     //Player variables
     [SerializeField] private float speed = 7f;
     [SerializeField] private float sprintSpeed = 14f;
@@ -94,13 +101,41 @@ public class Player : MonoBehaviour
         }
         if(isJumping && !isGrounded) {isJumping = false;}
 
-       
+
+
+        //added by tina
+
+        //if (spinning)
+        //{
+        //    if (timeElapsed < lerpDuration)
+        //    {
+        //        Mathf.Lerp(transform.rotation.y, rotationFloat, timeElapsed / lerpDuration);
+        //        timeElapsed += Time.deltaTime;
+        //    }
+
+        //    if (timeElapsed == lerpDuration)
+        //    {
+        //        spinning = false;
+        //        timeElapsed = 0;
+        //    }
+        //}
+
     }
 
     //controls trigger boxes to change camera
     //added by tina
     private void OnTriggerEnter(Collider other)
     {
+
+        if (other.gameObject.CompareTag("TriggerBox"))
+        {
+            Debug.Log("triggered");
+            rotationFloat = other.gameObject.GetComponent<Rotate>().target;
+            Destroy(other.gameObject);
+            spinning = true;
+            transform.Rotate(0.0f, rotationFloat, 0.0f, Space.Self);
+        }
+
 
         //mainCam.enabled = false;
         //mainCam.transform.SetParent(null);
@@ -111,28 +146,41 @@ public class Player : MonoBehaviour
 
 
 
-        if (other.gameObject.CompareTag("Trigger1"))
-        {
-            currentCam.enabled = false;
-            currentCam = mainCam;
-            mainCam.enabled = true;
-        }
+        //if (other.gameObject.CompareTag("Trigger1"))
+        //{
+        //    currentCam.enabled = false;
+        //    currentCam = mainCam;
+        //    mainCam.enabled = true;
+        //}
 
-        if (other.gameObject.CompareTag("Trigger2"))
-        {
-            currentCam.enabled = false;
-            currentCam = cam2;
-            cam2.enabled = true;
-        }
+        //if (other.gameObject.CompareTag("Trigger2"))
+        //{
 
-        if (other.gameObject.CompareTag("Trigger3"))
-        {
-            currentCam.enabled = false;
-            currentCam = cam3;
-            cam3.enabled = true;
-        }
+        //    currentCam.enabled = false;
+        //    currentCam = cam2;
+        //    cam2.enabled = true;
+        //}
 
+        //if (other.gameObject.CompareTag("Trigger3"))
+        //{
+        //    currentCam.enabled = false;
+        //    currentCam = cam3;
+        //    cam3.enabled = true;
+        //}
     }
+
+    //IEnumerator Rotate(float target)
+    //{
+    //    float timeElapsed = 0;
+    //    while (timeElapsed < lerpDuration)
+    //    {
+    //        Mathf.Lerp(transform.rotation.y, target, timeElapsed / lerpDuration);
+    //        timeElapsed += Time.deltaTime;
+    //        yield return null;
+    //    }
+    //}
+
+
 
     private void Fire()
     {
