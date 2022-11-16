@@ -132,7 +132,6 @@ public class Player : MonoBehaviour
             Debug.Log("triggered");
             rotationFloat = other.gameObject.GetComponent<Rotate>().target;
             Destroy(other.gameObject);
-            spinning = true;
             transform.Rotate(0.0f, rotationFloat, 0.0f, Space.Self);
         }
 
