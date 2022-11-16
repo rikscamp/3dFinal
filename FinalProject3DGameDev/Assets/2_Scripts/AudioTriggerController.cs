@@ -25,8 +25,19 @@ public class AudioTriggerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && !hasTriggered)
         {
-            audioSource.PlayOneShot(audioToPlay[0]);
             hasTriggered = true;
+            StartCoroutine("PlaySecond");
         }
+    }
+
+    IEnumerator PlaySecond()
+    {
+        yield return new WaitUntil(() => audioSource.isPlaying == false);
+        for (int i = 0; i <audioToPlay.Length; i++)
+        {
+            audioSource.PlayOneShot(audioToPlay[i]);
+            yield return new WaitUntil(() => audioSource.isPlaying == false);
+        }
+        StopCoroutine("PlaySecond");
     }
 }
