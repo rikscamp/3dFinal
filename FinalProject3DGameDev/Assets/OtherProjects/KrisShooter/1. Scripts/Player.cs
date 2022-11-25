@@ -14,6 +14,11 @@ public class Player : MonoBehaviour
     //Shooting Variables
     private Transform muzzle;
 
+    //determines direction
+    private float direction;
+
+    [SerializeField] private Animator animator;
+
     //Holds current camera
     [SerializeField] Camera currentCam;
     [SerializeField] Camera mainCam;          //cam1   //added by tina
@@ -52,6 +57,8 @@ public class Player : MonoBehaviour
     {
         controls = new Controls();
 
+        
+
         characterController = GetComponent<CharacterController>();
         
         //Jump
@@ -67,6 +74,9 @@ public class Player : MonoBehaviour
         //Gun piece
         //muzzle = GameObject.Find("Muzzle").transform;
         //gun = GameObject.Find("Gun").transform;
+
+        
+
 
         currentCam = mainCam;       //added by Tina
 
@@ -101,6 +111,19 @@ public class Player : MonoBehaviour
         }
         if(isJumping && !isGrounded) {isJumping = false;}
 
+
+        //Sets animator values
+        animator.SetFloat("X", movement.x);
+
+        animator.SetFloat("Y", velocity.y);
+
+        animator.SetFloat("Z", movement.z);
+
+        animator.SetBool("isGrounded", isGrounded);
+
+        animator.SetFloat("speed", movement.magnitude);
+
+        
 
 
         //added by tina
