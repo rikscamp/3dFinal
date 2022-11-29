@@ -4,21 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - EnemyProjectile
-  - PlayerProjectile
-  - Camera
-  - Trigger1
-  - Trigger2
-  - Trigger3
-  - TriggerBox
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 
