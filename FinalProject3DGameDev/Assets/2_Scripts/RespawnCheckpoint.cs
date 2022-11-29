@@ -26,11 +26,9 @@ public class RespawnCheckpoint : MonoBehaviour
     void Update()
     {
 
-        if (Player.transform.position.y < LevelBottom)
-        {
-            Player.transform.position = PlayerStart;
-        }
     }
+
+  
 
     private void OnTriggerEnter(Collider other)
     {
@@ -39,6 +37,11 @@ public class RespawnCheckpoint : MonoBehaviour
             PlayerStart = other.transform.position;
 
             Debug.Log("TRIGGERED");
+        }
+
+        if (other.gameObject.CompareTag("Respawn"))
+        {
+            Player.transform.position = PlayerStart;
         }
     }
 }
