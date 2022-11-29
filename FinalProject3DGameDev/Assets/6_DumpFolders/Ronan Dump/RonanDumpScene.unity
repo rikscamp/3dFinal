@@ -512,6 +512,7 @@ MonoBehaviour:
   Player: {fileID: 717391853}
   CheckpointTransform: {fileID: 233478428}
   PlayerTransform: {fileID: 717391857}
+  RespawnTransform: {fileID: 1124679695}
   LevelBottom: -4
 --- !u!1 &816778080
 GameObject:

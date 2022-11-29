@@ -10,6 +10,7 @@ public class RespawnCheckpoint : MonoBehaviour
 
     public Transform CheckpointTransform;
     public Transform PlayerTransform;
+    public Transform RespawnTransform;
 
     public float LevelBottom; 
 
