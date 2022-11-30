@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1660484913473317717}
   - component: {fileID: -6437937460546021067}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: RoofBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 970805969219816771}
   - component: {fileID: 641508998581006265}
   - component: {fileID: 4394163148451989481}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: pasted__pCylinder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
