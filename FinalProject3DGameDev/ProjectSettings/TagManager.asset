@@ -4,21 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - EnemyProjectile
-  - PlayerProjectile
-  - Camera
-  - Trigger1
-  - Trigger2
-  - Trigger3
+  - Checkpoint
   - TriggerBox
+  - NinjaStar
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - Ground
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 
