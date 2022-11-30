@@ -5,11 +5,20 @@ TagManager:
   serializedVersion: 2
   tags:
   - Checkpoint
+<<<<<<< HEAD
+=======
+  - TriggerBox
+  - NinjaStar
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
+<<<<<<< HEAD
   - 
+=======
+  - Ground
+>>>>>>> main
   - Water
   - UI
   - 

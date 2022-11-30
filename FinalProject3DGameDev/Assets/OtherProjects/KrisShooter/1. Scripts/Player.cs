@@ -19,11 +19,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
-    //Holds current camera
-    [SerializeField] Camera currentCam;
-    [SerializeField] Camera mainCam;          //cam1   //added by tina
-    [SerializeField] Camera cam2;
-    [SerializeField] Camera cam3;
+  
+
+    
 
     //added by tina
     [SerializeField] float rotationFloat;
@@ -68,18 +66,6 @@ public class Player : MonoBehaviour
         controls.Gameplay.Sprint.performed += ctx => Sprint();
         controls.Gameplay.Sprint.canceled += ctx => SprintReleased();
 
-        //Fire
-        controls.Gameplay.Fire.performed += ctx => Fire();
-
-        //Gun piece
-        //muzzle = GameObject.Find("Muzzle").transform;
-        //gun = GameObject.Find("Gun").transform;
-
-        
-
-
-        currentCam = mainCam;       //added by Tina
-
     }
 
     // Update is called once per frame
@@ -123,25 +109,17 @@ public class Player : MonoBehaviour
 
         animator.SetFloat("speed", movement.magnitude);
 
-        
+        //flip
+        if(move.x > 0)
+        {
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+        if (move.x < 0)
+        {
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
+        }
 
-
-        //added by tina
-
-        //if (spinning)
-        //{
-        //    if (timeElapsed < lerpDuration)
-        //    {
-        //        Mathf.Lerp(transform.rotation.y, rotationFloat, timeElapsed / lerpDuration);
-        //        timeElapsed += Time.deltaTime;
-        //    }
-
-        //    if (timeElapsed == lerpDuration)
-        //    {
-        //        spinning = false;
-        //        timeElapsed = 0;
-        //    }
-        //}
+       
 
     }
 
@@ -159,71 +137,9 @@ public class Player : MonoBehaviour
         }
 
 
-        //mainCam.enabled = false;
-        //mainCam.transform.SetParent(null);
-        //mainCam = other.gameObject.transform.GetChild(0).GetComponent<Camera>();
-        //mainCam.transform.SetParent(this.gameObject.transform);
-        //mainCam.enabled = true;
-        //Destroy(other);
-
-
-
-        //if (other.gameObject.CompareTag("Trigger1"))
-        //{
-        //    currentCam.enabled = false;
-        //    currentCam = mainCam;
-        //    mainCam.enabled = true;
-        //}
-
-        //if (other.gameObject.CompareTag("Trigger2"))
-        //{
-
-        //    currentCam.enabled = false;
-        //    currentCam = cam2;
-        //    cam2.enabled = true;
-        //}
-
-        //if (other.gameObject.CompareTag("Trigger3"))
-        //{
-        //    currentCam.enabled = false;
-        //    currentCam = cam3;
-        //    cam3.enabled = true;
-        //}
-    }
-
-    //IEnumerator Rotate(float target)
-    //{
-    //    float timeElapsed = 0;
-    //    while (timeElapsed < lerpDuration)
-    //    {
-    //        Mathf.Lerp(transform.rotation.y, target, timeElapsed / lerpDuration);
-    //        timeElapsed += Time.deltaTime;
-    //        yield return null;
-    //    }
-    //}
-
-
-
-    private void Fire()
-    {
-        /*
-        Ray LOS = new Ray(Camera.main.transform.position, Camera.main.transform.rotation * Camera.main.transform.position);
-        RaycastHit hit;
-        Vector3 target;
-        
-        if(Physics.Raycast(LOS, out hit, 100f, groundMask)) {
-            target = hit.point;
-        } else {
-            target = muzzle.forward;
-        }
-        
-
-        Debug.DrawRay(Camera.main.transform.position, target);
-        muzzle.LookAt(target);
-        */
-
         
     }
+
 
     private void Sprint()
     {

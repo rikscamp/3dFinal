@@ -198,7 +198,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+  m_RootOrder: 5
+>>>>>>> main
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &233478429
 BoxCollider:
@@ -423,7 +427,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+  m_RootOrder: 2
+>>>>>>> main
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &687864382
 GameObject:
@@ -537,8 +545,11 @@ GameObject:
   - component: {fileID: 717391858}
   - component: {fileID: 717391859}
   - component: {fileID: 717391860}
+<<<<<<< HEAD
   - component: {fileID: 717391861}
   - component: {fileID: 717391862}
+=======
+>>>>>>> main
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -620,12 +631,18 @@ Transform:
   m_LocalPosition: {x: 15.99, y: 1.994, z: 247.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
+<<<<<<< HEAD
   m_Children:
   - {fileID: 816778083}
   - {fileID: 2056755237}
   - {fileID: 1273479460}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+=======
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+>>>>>>> main
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &717391858
 MonoBehaviour:
@@ -675,6 +692,7 @@ MonoBehaviour:
   PlayerTransform: {fileID: 717391857}
   RespawnTransform: {fileID: 1124679695}
   LevelBottom: -4
+<<<<<<< HEAD
 --- !u!81 &717391861
 AudioListener:
   m_ObjectHideFlags: 0
@@ -701,6 +719,8 @@ MonoBehaviour:
   musicBPM: 150
   timeSignature: 4
   barsLength: 24
+=======
+>>>>>>> main
 --- !u!1 &816778080
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +731,10 @@ GameObject:
   m_Component:
   - component: {fileID: 816778083}
   - component: {fileID: 816778082}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 816778081}
+>>>>>>> main
   - component: {fileID: 816778084}
   m_Layer: 0
   m_Name: Main Camera
@@ -770,7 +794,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816778080}
   m_LocalRotation: {x: 0.15338069, y: -0, z: -0, w: 0.98816717}
+<<<<<<< HEAD
   m_LocalPosition: {x: 2.1399994, y: 6.046, z: -14.599991}
+=======
+  m_LocalPosition: {x: 18.13, y: 8.04, z: 232.83}
+>>>>>>> main
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -819,7 +847,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1124679695}
+<<<<<<< HEAD
   - component: {fileID: 1124679696}
+=======
+>>>>>>> main
   m_Layer: 0
   m_Name: Respawn Point
   m_TagString: Respawn
@@ -840,6 +871,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1124679696
@@ -982,6 +1014,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 717391857}
   m_RootOrder: 2
+=======
+  m_RootOrder: 4
+>>>>>>> main
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1327173476
 GameObject:
@@ -1014,6 +1049,7 @@ Transform:
   - {fileID: 94353213}
   - {fileID: 687864386}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2056755235
@@ -1143,4 +1179,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 717391857}
   m_RootOrder: 1
+=======
+  m_RootOrder: 6
+>>>>>>> main
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
