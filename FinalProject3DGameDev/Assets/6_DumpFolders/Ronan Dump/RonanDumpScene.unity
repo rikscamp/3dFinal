@@ -700,7 +700,7 @@ MonoBehaviour:
   - {fileID: 1273479459}
   musicBPM: 150
   timeSignature: 4
-  barsLength: 25
+  barsLength: 24
 --- !u!1 &816778080
 GameObject:
   m_ObjectHideFlags: 0
