@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 341644627089354026}
   - component: {fileID: 3680030711258800783}
   - component: {fileID: 1510657674755905093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlickeringLanternWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7878542453586819207}
   - component: {fileID: 6395570319296583617}
   - component: {fileID: 7824495908926579678}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LightSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}

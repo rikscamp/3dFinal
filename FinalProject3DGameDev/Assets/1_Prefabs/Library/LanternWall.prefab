@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 49515512203444902}
   - component: {fileID: 4603862600029272823}
   - component: {fileID: 753123043788150193}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LightSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 7034649374987182335}
   - component: {fileID: 5063434785441453109}
   - component: {fileID: 7699752744117293115}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LanternWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3978360539189466968}
   - component: {fileID: 1211765841889141650}
   - component: {fileID: -5587234846946221585}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ArchMedium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ MeshCollider:
   m_GameObject: {fileID: 851728903640613447}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30

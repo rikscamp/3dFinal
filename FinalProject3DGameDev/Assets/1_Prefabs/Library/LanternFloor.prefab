@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3206691999184810392}
   - component: {fileID: 1809840335552900123}
   - component: {fileID: 9200772073174263865}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LightSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8174943489399777391}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: pasted__pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5002662925477296718}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: transform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6467846106016683176}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: transform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 6312825980749298368}
   - component: {fileID: 710973355860455570}
   - component: {fileID: 5227359031135150921}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: pasted__LanternTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 584473927938099021}
   - component: {fileID: 661505296533297585}
   - component: {fileID: 5352843527904589668}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: LanternFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1862433521060049272}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2353188771955962358}
   - component: {fileID: 1326340389971097026}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6447621624632425137}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: pasted__LanternTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
