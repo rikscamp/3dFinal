@@ -75,7 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -8830012937149039585, guid: d3e8ce4950fcf024e9c51e26812101c3, type: 3}
+  m_Sprite: {fileID: -8830012937149039585, guid: d3e8ce4950fcf024e9c51e26812101c3,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -195,6 +196,7 @@ MonoBehaviour:
   airDashForce: 17
   airDashLift: 15
   isCrouch: 0
+  isBouncy: 0
   isGrounded: 0
   groundCheck: {fileID: 2115747878696574607}
   checkRadius: 0.3
@@ -324,4 +326,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounce: 14
+  bounceHigh: 0
   rb2D: {fileID: 2115747877746238601}

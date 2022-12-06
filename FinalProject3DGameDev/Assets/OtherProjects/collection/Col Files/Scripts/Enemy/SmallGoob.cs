@@ -26,7 +26,7 @@ public class SmallGoob : BasicEnemy
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
 
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance, LayerMask.GetMask("isGround"));
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, distance, LayerMask.GetMask("Ground"));
 
         if (groundInfo.collider == false)
         {
@@ -42,7 +42,7 @@ public class SmallGoob : BasicEnemy
             }
         }
 
-        RaycastHit2D wallInfo = Physics2D.Raycast(wallDetection.position, Vector2.left, .01f , LayerMask.GetMask("isGround"));
+        RaycastHit2D wallInfo = Physics2D.Raycast(wallDetection.position, Vector2.left, .01f , LayerMask.GetMask("Ground"));
 
         if(wallInfo.collider == true)
         {

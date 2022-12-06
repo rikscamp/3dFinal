@@ -39,7 +39,8 @@ public class PlayerAnimator : MonoBehaviour
 
             if (playerMove.InputVector.y < -0.8f)
             {
-                ChangeAnimationState(Player_IdleToCrouch);
+                //ChangeAnimationState(Player_IdleToCrouch);
+                Debug.Log("Crouched");
             }
             else 
             {
