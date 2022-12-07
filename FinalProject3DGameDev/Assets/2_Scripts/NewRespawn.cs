@@ -18,13 +18,11 @@ public class NewRespawn : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (PlayerOBJ.transform.position.y <= RespawnPoint.y - respawnSubtract)
+        if (PlayerOBJ.transform.position.y < RespawnPoint.y - respawnSubtract)
         {
-            Debug.Log("Woah!");
-            PlayerOBJ.transform.position = RespawnPoint;
-            Debug.Log("RESPAWNED");
+            Respawn();
         }
     }
 
@@ -44,5 +42,12 @@ public class NewRespawn : MonoBehaviour
 
             //Debug.Log("RESPAWNED");
         //}
+    }
+
+    void Respawn()
+    {
+        Debug.Log("Woah!");
+        PlayerOBJ.transform.position = RespawnPoint;
+        Debug.Log("RESPAWNED");
     }
 }
