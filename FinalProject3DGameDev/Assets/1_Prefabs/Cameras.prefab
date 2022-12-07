@@ -177,124 +177,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 25, z: 40}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &100979402578413439
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 100979402578413438}
-  - component: {fileID: 100979402578413408}
-  - component: {fileID: 100979402578413409}
-  m_Layer: 0
-  m_Name: DojoTrigger3
-  m_TagString: TriggerBox
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &100979402578413438
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100979402578413439}
-  m_LocalRotation: {x: -0, y: -0.28644615, z: -0, w: 0.9580964}
-  m_LocalPosition: {x: 523.3, y: -37.6, z: 463.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 100979403369214058}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: -33.291, z: 0}
---- !u!114 &100979402578413408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100979402578413439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21971f648e9d6cb41832dd73f756ee34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: 20
---- !u!65 &100979402578413409
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100979402578413439}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 25, z: 40}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &100979402593736852
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 100979402593736855}
-  - component: {fileID: 100979402593736857}
-  - component: {fileID: 100979402593736854}
-  m_Layer: 0
-  m_Name: DojoTrigger2
-  m_TagString: TriggerBox
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &100979402593736855
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100979402593736852}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 476.2, y: -37.6, z: 447.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 100979403369214058}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &100979402593736857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100979402593736852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21971f648e9d6cb41832dd73f756ee34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: 20
---- !u!65 &100979402593736854
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100979402593736852}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 25, z: 40}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &100979402656952600
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &100979402656952603
 Transform:
   m_ObjectHideFlags: 0
@@ -326,7 +208,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 100979403369214058}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 110.518, z: 0}
 --- !u!114 &100979402656952605
 MonoBehaviour:
@@ -505,8 +387,6 @@ Transform:
   - {fileID: 100979402878410948}
   - {fileID: 100979403236938928}
   - {fileID: 100979402435210895}
-  - {fileID: 100979402593736855}
-  - {fileID: 100979402578413438}
   - {fileID: 100979402656952603}
   m_Father: {fileID: 0}
   m_RootOrder: 0
