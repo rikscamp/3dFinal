@@ -24,7 +24,7 @@ public class SpawnEnemies : MonoBehaviour
             Instantiate(enemy, new Vector3(tf.position.x, tf.position.y, tf.position.z), spawnRot);
             timer = timerStart;
         }
-        Debug.Log(timer);
+        //Debug.Log(timer);
 
     }
 }
