@@ -7,15 +7,16 @@ public class AudioTriggerController : MonoBehaviour
     public GameObject MainAudioSource;
     public GameObject EntryMusicAudioSource;
     public GameObject Player;
-    public AudioSource MainAudio;
+   // public AudioSource MainAudio;
   
-    public float[] Pitches;
-    public static int Range;
+   // public float[] Pitches;
+   // public static int Range;
+   // public float waitTime = 10f;
 
     // Start is called before the first frame update
     void Start()
     {
-        MainAudio = GetComponent<AudioSource>();
+       // MainAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,9 +25,9 @@ public class AudioTriggerController : MonoBehaviour
 
         //create Array
 
-        Pitches = new float[10];
+        //Pitches = new float[10];
 
-        Range = Random.Range(0, 9);
+        //Range = Random.Range(0, 9);
 
         //Swap Audio Sources
 
@@ -34,19 +35,19 @@ public class AudioTriggerController : MonoBehaviour
         {
             EntryMusicAudioSource.SetActive(false);
             MainAudioSource.SetActive(true);
-            StartCoroutine(PitchChange());
+            //StartCoroutine(PitchChange(waitTime));
         }
     }
 
-    IEnumerator PitchChange()
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            MainAudio.pitch = Range;
-        }
+    //IEnumerator PitchChange(float waitTime)
+  //  {
+       // for (int i = 0; i < waitTime; i++)
+       // {
+           // MainAudio.pitch = Range;
+       // }
 
-        yield return new WaitForSeconds(10);
-    }
+       // yield return new WaitForSeconds(waitTime);
+    //}
 
 }
 
