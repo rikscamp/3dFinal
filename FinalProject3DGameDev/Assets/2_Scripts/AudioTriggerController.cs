@@ -4,40 +4,25 @@ using UnityEngine;
 
 public class AudioTriggerController : MonoBehaviour
 {
-    private AudioSource audioSource;
-    public AudioClip[] audioToPlay;
-    public bool hasTriggered = false;
+    public GameObject MainAudioSource;
+    public GameObject EntryMusicAudioSource;
+    public GameObject Player;
     
     // Start is called before the first frame update
     void Start()
     {
-        hasTriggered = false;
-        audioSource = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    // Update is called once per frame
+    void Update()
     {
-        if (other.gameObject.CompareTag("Player") && !hasTriggered)
+        if (Player.transform.position.y < 500)
         {
-            hasTriggered = true;
-            StartCoroutine("PlaySecond");
+            EntryMusicAudioSource.SetActive(false);
+            MainAudioSource.SetActive(true);
         }
     }
 
-    IEnumerator PlaySecond()
-    {
-        yield return new WaitUntil(() => audioSource.isPlaying == false);
-        for (int i = 0; i <audioToPlay.Length; i++)
-        {
-            audioSource.PlayOneShot(audioToPlay[i]);
-            yield return new WaitUntil(() => audioSource.isPlaying == false);
-        }
-        StopCoroutine("PlaySecond");
-    }
+    
 }
