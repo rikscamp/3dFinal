@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/0_ImportantScenes/Level.unity
     guid: e05f7224beeb9794ab99013e27e836f6
+  - enabled: 1
+    path: Assets/0_ImportantScenes/Moby_Finale.unity
+    guid: df9112389ad370348bb02b904639b088
   m_configObjects: {}
