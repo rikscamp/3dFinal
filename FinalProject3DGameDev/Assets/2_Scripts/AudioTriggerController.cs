@@ -7,6 +7,7 @@ public class AudioTriggerController : MonoBehaviour
     public GameObject MainAudioSource;
     public GameObject EntryMusicAudioSource;
     public GameObject Player;
+
    // public AudioSource MainAudio;
   
    // public float[] Pitches;
@@ -37,6 +38,8 @@ public class AudioTriggerController : MonoBehaviour
             MainAudioSource.SetActive(true);
             //StartCoroutine(PitchChange(waitTime));
         }
+
+
     }
 
     //IEnumerator PitchChange(float waitTime)
