@@ -15,6 +15,10 @@ public class RunFinalAnimation : MonoBehaviour
     [SerializeField] private string DS_Done = "DeleteSequenceDone";
 
     public float BeforePlay = 0.0f;
+    public bool crash() 
+    { 
+        return crash(); 
+    } //CRASH TEST
     void OnTriggerEnter(Collider other) //Checks for collison with an object
     {
         if (other.tag == "Player") //If that object has the player tag, run the corountine 
@@ -37,6 +41,9 @@ public class RunFinalAnimation : MonoBehaviour
         yield return new WaitForSeconds(7f); //Wait for 1 second
         NoCamera.SetActive(false); //Gets rid of No Camera Sprite
         Credits.SetActive(true); //Enables Credit
+        yield return new WaitForSeconds(10f); //Wait for 1 second
+        //crash();
+
     }
     
     
