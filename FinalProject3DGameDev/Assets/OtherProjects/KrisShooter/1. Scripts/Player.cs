@@ -66,6 +66,8 @@ public class Player : MonoBehaviour
         controls.Gameplay.Sprint.performed += ctx => Sprint();
         controls.Gameplay.Sprint.canceled += ctx => SprintReleased();
 
+        controls.Gameplay.Exit.performed += _ => OnExitPressed();
+
     }
 
     // Update is called once per frame
@@ -160,6 +162,12 @@ public class Player : MonoBehaviour
     public void OnJumpPressed()
     {
         isJumping = true;
+    }
+
+    public void OnExitPressed()
+    {
+        Debug.Log("exit");
+        Application.Quit();
     }
 
     private void OnEnable()
