@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class NewRespawn : MonoBehaviour
 {
-    public CheckpointScript checkpointScript;
+    private CheckpointScript checkpointScript;
     public GameObject PlayerOBJ;
     //public Rigidbody PlayerRB;
-    [SerializeField] Vector3 RespawnPoint;
+    public Vector3 RespawnPoint;
     [SerializeField] private float respawnSubtract = 20;
 
     // Start is called before the first frame update

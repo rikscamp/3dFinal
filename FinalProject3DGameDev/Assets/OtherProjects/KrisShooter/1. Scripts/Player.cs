@@ -51,6 +51,10 @@ public class Player : MonoBehaviour
     //force of gravity on player
     public float gravity = -9.81f;
 
+    //Respawning Variables
+    public NewRespawn NewRespawn;
+
+
     private void Awake()
     {
         controls = new Controls();
@@ -66,7 +70,11 @@ public class Player : MonoBehaviour
         controls.Gameplay.Sprint.performed += ctx => Sprint();
         controls.Gameplay.Sprint.canceled += ctx => SprintReleased();
 
+        //Exits the Game
         controls.Gameplay.Exit.performed += _ => OnExitPressed();
+
+        //Respawning
+        controls.Gameplay.Respawn.performed += ctx => Respawn();
 
     }
 
@@ -176,6 +184,11 @@ public class Player : MonoBehaviour
     {
         Debug.Log("exit");
         Application.Quit();
+    }
+
+    private void Respawn()
+    {
+        gameObject.transform.position = NewRespawn.RespawnPoint;
     }
 
     private void OnEnable()
