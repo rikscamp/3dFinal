@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    
     private float speed = 4.0f;
     private Rigidbody rb;
     private GameObject player;
+    private GameObject someGameObject;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
+        someGameObject = GameObject.Find ("Debug2");
     }
 
     // Update is called once per frame
     void Update()
     {
+        someGameObject.SetActive(false);
         //rb.AddForce(((player.transform.position - transform.position) * speed));
         Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1 * Time.deltaTime);
