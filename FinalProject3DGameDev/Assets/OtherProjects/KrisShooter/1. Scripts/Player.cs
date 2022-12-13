@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
 
     //Respawning Variables
     public NewRespawn NewRespawn;
+    public GameObject PlayerOBJ;
 
 
     private void Awake()
@@ -188,7 +189,7 @@ public class Player : MonoBehaviour
 
     private void Respawn()
     {
-        gameObject.transform.position = NewRespawn.RespawnPoint;
+        PlayerOBJ.transform.position = NewRespawn.RespawnPoint;
     }
 
     private void OnEnable()

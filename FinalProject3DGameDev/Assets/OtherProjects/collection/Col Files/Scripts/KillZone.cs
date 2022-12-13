@@ -7,8 +7,8 @@ public class KillZone : MonoBehaviour
     public GameObject respawnPoint, player;
     
 
-    void OnCollisionEnter2D(Collision2D col)
-    {
+    void OnCollisionEnter ()
+    { 
         if (col.transform.CompareTag("Player")) 
         {
             StartCoroutine(Respawn());
