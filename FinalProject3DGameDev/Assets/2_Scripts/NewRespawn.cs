@@ -20,7 +20,7 @@ public class NewRespawn : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (PlayerOBJ.transform.position.y < RespawnPoint.y - respawnSubtract)
+        if (PlayerOBJ.transform.position.y <= RespawnPoint.y - respawnSubtract)
         {
             Respawn();
         }

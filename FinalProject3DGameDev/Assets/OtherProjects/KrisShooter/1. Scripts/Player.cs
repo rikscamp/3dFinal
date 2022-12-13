@@ -19,8 +19,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
-  
-
+    //added by tina for footsteps
+    public AudioSource[] audio;
     
 
     //added by tina
@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
     {
         controls = new Controls();
 
-        
+        audio = GetComponents<AudioSource>();
 
         characterController = GetComponent<CharacterController>();
         
@@ -65,6 +65,8 @@ public class Player : MonoBehaviour
         //Sprint    
         controls.Gameplay.Sprint.performed += ctx => Sprint();
         controls.Gameplay.Sprint.canceled += ctx => SprintReleased();
+
+        controls.Gameplay.Exit.performed += _ => OnExitPressed();
 
     }
 
@@ -89,6 +91,14 @@ public class Player : MonoBehaviour
         move = controls.Gameplay.Movement.ReadValue<Vector2>();
         Vector3 movement = move.y * transform.forward + (move.x * transform.right);
         characterController.Move(movement * speed * Time.deltaTime);
+
+
+        ////added by tina to play footsteps
+        //if(isGrounded && ((velocity.x != 0) || (velocity.z != 0)))
+        //{
+        //    audio[0].Play();
+        //    audio[1].Play();
+        //}
 
         //Jump
         if (isJumping && isGrounded)
@@ -160,6 +170,12 @@ public class Player : MonoBehaviour
     public void OnJumpPressed()
     {
         isJumping = true;
+    }
+
+    public void OnExitPressed()
+    {
+        Debug.Log("exit");
+        Application.Quit();
     }
 
     private void OnEnable()
