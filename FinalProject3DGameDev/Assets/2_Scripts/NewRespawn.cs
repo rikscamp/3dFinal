@@ -47,7 +47,14 @@ public class NewRespawn : MonoBehaviour
     void Respawn()
     {
         Debug.Log("Woah!");
+        PlayerOBJ.GetComponent<Player>().enabled = false;
+        PlayerOBJ.GetComponent<CharacterController>().enabled = false;
+
         PlayerOBJ.transform.position = RespawnPoint;
+
+        PlayerOBJ.GetComponent<Player>().enabled = true;
+        PlayerOBJ.GetComponent<CharacterController>().enabled = true;
+
         Debug.Log("RESPAWNED");
     }
 }
